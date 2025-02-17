@@ -1,5 +1,5 @@
 #PSYC 259 Homework 2 - Data Transformation
-#For full credit, provide answers for at least 7/10
+#For full credit, provide answers for at least 7/10 (10/10)
 
 #List names of students collaborating with: 
 
@@ -134,6 +134,9 @@ ds <- ds %>%
   )
 
 unique(ds$year)
+
+#Mcomment: The key filters the ifelse on song (like if there was more than song with 1879)
+ds  <- ds %>% mutate(year = ifelse(song == "Brass in Pocket", 1979, year)
 
 # recalculating #6  
 ds_sum <- ds %>% 
